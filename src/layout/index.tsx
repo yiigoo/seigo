@@ -8,7 +8,7 @@ interface IProp {
 }
 export default function IndexPage({ children }: IProp) {
   return (
-    <div className={styles.body}>
+    <div className={styles.html}>
       <Header></Header>
       <div className={styles.container}>{children}</div>
       <Footer></Footer>

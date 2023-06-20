@@ -21,7 +21,9 @@ export default function IndexPage() {
       <div className={styles.list}>
         {currentProducts.map(({ id, img, name }) => (
           <div className={styles.item} id={id}>
-            <div className={styles.img}>{img}</div>
+            <div className={styles.img}>
+              <img src={img} alt="" width={200} />
+            </div>
             <div className={styles.name}>{name}</div>
           </div>
         ))}

@@ -9,7 +9,9 @@ export default function IndexPage() {
     <div className={styles.header}>
       <div className={styles.container}>
         <h1 className={styles.logo}>
-          <Link to={'/home'}>SEIGO</Link>
+          <Link to={'/home'}>
+            <img src="/r/logo.png" alt="" height={55} />
+          </Link>
         </h1>
         <nav className={styles.nav}>
           <ul>
