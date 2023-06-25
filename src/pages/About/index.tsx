@@ -1,9 +1,9 @@
 import styles from './index.less';
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/Breadcrumb/index';
 export default function () {
   return (
     <div className="page-container">
-      <Breadcrumb title="About us" sub={'WELCOME TO SEIGO'} />
+      <Breadcrumb title="About us" sub="WELCOME TO SEIGO" />
       <div className={styles.content}>
         <p>
           SEIGO BUSINESS (HK)LIMTED, established in 2018, is a professional
