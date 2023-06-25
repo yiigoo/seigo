@@ -19,8 +19,13 @@ export default function ({ options = [], defaultValue, onChange }: IProps) {
       {options.map(({ label, value }) => (
         <div
           key={value}
-          onClick={() => onChange?.(value)}
-          className={`${styles.item} ${currentValue === value ? 'active' : ''}`}
+          onClick={() => {
+            onChange?.(value);
+            setCurrentValue(value);
+          }}
+          className={`${styles.item} ${
+            currentValue === value ? styles.active : ''
+          }`}
         >
           {label}
         </div>

@@ -4,13 +4,13 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  publicPath: './',
   routes: [
     {
       path: '/',
       component: '@/layout/index',
-      name: 'Home',
+      name: 'Layout',
       routes: [
+        { path: '/home', component: '@/pages/Index', name: 'Home' },
         { path: '/about', component: '@/pages/About', name: 'About us' },
         {
           path: '/product',
@@ -18,10 +18,11 @@ export default defineConfig({
           name: 'Product',
         },
         {
-          path: '/product/:id/:productId',
+          path: '/product/:path',
           component: '@/pages/Product/Detail',
           name: 'Product Detail ',
         },
+
         { path: '/contact', component: '@/pages/Contact', name: 'Contact' },
       ],
     },

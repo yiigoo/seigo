@@ -1,9 +1,14 @@
+import Banner from './components/Banner';
 import styles from './index.less';
+import ProductPage from '@/pages/Product';
 
 export default function IndexPage() {
   return (
-    <div>
-      <h1 className={styles.title}>Page index</h1>
-    </div>
+    <>
+      <Banner />
+      <div className="page-container">
+        <ProductPage />
+      </div>
+    </>
   );
 }

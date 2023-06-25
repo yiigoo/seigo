@@ -1,4 +1,19 @@
+@import '../../styles/style.less';
 .tabs {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 36px;
 }
 .item {
+  display: inline-block;
+  padding: 10px 30px;
+  transition: 0.5s all;
+  &:hover {
+    background-color: rgba(2, 80, 197, 0.05);
+    cursor: pointer;
+  }
+}
+.active {
+  background-color: @color-primary !important;
+  color: #fff !important;
 }
