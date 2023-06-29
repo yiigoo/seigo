@@ -1,21 +1,30 @@
-import Breadcrumb from '@/components/Breadcrumb';
 import styles from './index.less';
 import { useParams } from 'umi';
 import products from '@/lib/product';
 import QueueAnim from 'rc-queue-anim';
 
 export default function IndexPage() {
-  const { path = '_' } = useParams();
+  const { path = '_' }: any = useParams();
   const [pid, productId] = path.split('_');
   const current = products.find(({ id }) => pid === id);
   const detail = current
     ? current?.products?.find(({ id }) => productId === id)
     : {};
-  const { img = '', name = '', dir = '', specification = [] } = detail;
+  const {
+    img = '',
+    name = '',
+    dir = '',
+    specification = [],
+    white,
+  }: any = detail;
+
   return (
     <div className="page-container">
       <div className={styles.content}>
-        <div className={styles.left}>
+        <div
+          className={styles.left}
+          style={white ? { background: '#fff' } : {}}
+        >
           <img src={img} alt="" />
         </div>
         <div className={styles.right}>
@@ -33,24 +42,24 @@ export default function IndexPage() {
               <div className={styles.dir} key={'dir'}>
                 {dir}
               </div>
+              <h3 key={'spec'}>Specification</h3>
             </QueueAnim>
 
-            <QueueAnim
-              delay={500}
-              animConfig={[
-                { opacity: [1, 0], translateX: [0, 150] },
-                { opacity: [0, 0], translateX: [0, -150] },
-              ]}
-            >
-              <div className={styles.spec} key={'spec'}>
-                <h3>Specification</h3>
-                <ul>
+            <div className={styles.spec} key={'spec'}>
+              <ul>
+                <QueueAnim
+                  delay={500}
+                  animConfig={[
+                    { opacity: [1, 0], translateY: [0, 50] },
+                    { opacity: [0, 0], translateY: [0, -50] },
+                  ]}
+                >
                   {specification.map((text: string) => (
                     <li key={text}>{text}</li>
                   ))}
-                </ul>
-              </div>
-            </QueueAnim>
+                </QueueAnim>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

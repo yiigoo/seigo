@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   gap: 100px;
-  align-items: center;
   padding: 72px;
 }
 @keyframes shapeani {
@@ -20,19 +19,22 @@
 .left {
   width: 600px;
   text-align: center;
-  background-color: rgba(212, 63, 141, 0.1);
+  background: rgba(2, 80, 197, 0.05);
   img {
-    max-width: 600px;
+    max-width: 100%;
     animation: shapeani 4.5s linear infinite;
   }
 }
 .right {
+  padding-top: 60px;
   flex: 1;
   h3 {
     font-size: 20px;
+    margin-bottom: 12px;
   }
   ul {
     padding-left: 24px;
+    min-height: 400px;
     li {
       margin-left: 0;
       list-style: none;
@@ -67,4 +69,14 @@
   color: #555;
   font-size: 16px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    display: block;
+    padding: 24px 0;
+    .left {
+      width: 100%;
+    }
+  }
 }

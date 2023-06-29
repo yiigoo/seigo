@@ -10,6 +10,7 @@ export default defineConfig({
       component: '@/layout/index',
       name: 'Layout',
       routes: [
+        { path: '/', redirect: '/home' },
         { path: '/home', component: '@/pages/Index', name: 'Home' },
         { path: '/about', component: '@/pages/About', name: 'About us' },
         {

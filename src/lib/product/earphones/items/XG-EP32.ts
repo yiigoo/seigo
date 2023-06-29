@@ -3,6 +3,7 @@ export default {
   dir: 'Earphones',
   name: 'XG-EP32',
   img: '/r/product/earphones/XG-EP32.png',
+  white: true,
   specification: [
     'Frequency: 20-20kHz',
     'Speaker: 10mm',

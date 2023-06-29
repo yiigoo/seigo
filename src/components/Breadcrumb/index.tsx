@@ -8,8 +8,6 @@ export default function IndexPage({ title, sub }: IProps) {
   return (
     <div className={styles.container}>
       <QueueAnim
-        delay={100}
-        className="queue-simple"
         animConfig={[
           { opacity: [1, 0], translateX: [0, 150] },
           { opacity: [0, 0], translateX: [0, -150] },

@@ -1,4 +1,4 @@
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/Breadcrumb/index';
 import styles from './index.less';
 
 import products from '@/lib/product';

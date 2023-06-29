@@ -11,7 +11,18 @@ export default function IndexPage() {
         <div className={styles.container}>
           <h1 className={styles.logo}>
             <Link to={'/home'}>
-              <img src="/r/logo.png" alt="" height={48} />
+              <img
+                src="/r/logo.png"
+                alt=""
+                height={48}
+                className={styles.logoLarge}
+              />
+              <img
+                src="/r/logo-small.png"
+                alt=""
+                height={24}
+                className={styles.logoSmall}
+              />
             </Link>
           </h1>
           <nav className={styles.nav}>

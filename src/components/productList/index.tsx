@@ -8,10 +8,14 @@ interface IProps {
 export default function ({ list = [], dirId }: IProps) {
   return (
     <div className={styles.list}>
-      {list.map(({ id, img, name }) => (
+      {list.map(({ id, img, name, white }) => (
         <Link to={`/product/${dirId}_${id}`} className={styles.item}>
           <div className={styles.item} id={id}>
-            <div className={styles.img}>
+            <div
+              className={
+                white ? `${styles.img} ${styles.imgWhite}` : `${styles.img}`
+              }
+            >
               <img src={img} alt="" width={200} />
             </div>
             <div className={styles.name}>{name}</div>
