@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // import Swiper core and required modules
 import { Navigation, Pagination } from 'swiper';
 
-import styles from './index.less';
-
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 import Slide1 from './components/Slide1';
@@ -16,7 +14,6 @@ import Slide5 from './components/Slide5';
 export default () => {
   return (
     <Swiper
-      onSwiper={(swiper) => console.log(swiper)}
       navigation
       pagination={{ clickable: true }}
       modules={[Navigation, Pagination]}

@@ -6,9 +6,7 @@ export default function IndexPage() {
   return (
     <>
       <Banner />
-      <div className="page-container">
-        <ProductPage />
-      </div>
+      <ProductPage />
     </>
   );
 }
