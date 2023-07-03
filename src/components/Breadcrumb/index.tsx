@@ -6,7 +6,7 @@ interface IProps {
 }
 export default function IndexPage({ title, sub }: IProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={sub ? {} : { minHeight: 140 }}>
       <QueueAnim
         animConfig={[
           { opacity: [1, 0], translateX: [0, 150] },

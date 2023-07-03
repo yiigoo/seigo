@@ -1,9 +1,48 @@
 .slide {
   background: #00a1d9;
+  height: 600px;
 }
 .content {
   display: flex;
   justify-content: space-between;
   padding: 60px 70px;
-  height: 600px;
+  box-sizing: content-box;
+}
+.img1 {
+  margin-top: 20px;
+  width: 500px;
+}
+.img2 {
+  margin-top: 50px;
+  margin-left: 30px;
+  width: 180px;
+}
+.img3 {
+  margin-top: -40px;
+  width: 450px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  .slide {
+    height: 290px;
+  }
+
+  .img1 {
+    margin-top: 10px;
+    width: 200px;
+  }
+  .img2 {
+    margin-top: 0;
+    margin-left: 20px;
+    width: 100px;
+  }
+  .img3 {
+    margin-top: -20px;
+    width: 200px;
+  }
 }

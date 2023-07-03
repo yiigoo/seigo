@@ -3,7 +3,22 @@
   display: flex;
   justify-content: space-between;
   gap: 100px;
-  padding: 72px;
+}
+.page {
+  padding: 30px 72px;
+}
+.back {
+  font-size: 16px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: @color-primary;
+  img {
+    font-size: 0;
+    display: block;
+    color: @color-primary;
+  }
 }
 @keyframes shapeani {
   0% {
@@ -16,6 +31,7 @@
     transform: translateY(15px);
   }
 }
+
 .left {
   width: 600px;
   text-align: center;
@@ -28,13 +44,15 @@
 .right {
   padding-top: 60px;
   flex: 1;
+  overflow: hidden;
   h3 {
     font-size: 20px;
     margin-bottom: 12px;
   }
   ul {
     padding-left: 24px;
-    min-height: 400px;
+    min-height: 350px;
+    overflow: hidden;
     li {
       margin-left: 0;
       list-style: none;
@@ -59,22 +77,25 @@
 }
 
 .title {
+  margin-bottom: 0;
   font-size: 40px;
   font-weight: 700;
   color: #242424;
-  margin-bottom: 0;
   display: block;
 }
 .dir {
+  margin-bottom: 30px;
   color: #555;
   font-size: 16px;
-  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1024px) {
+  .page {
+    padding: 24px 0;
+  }
   .content {
     display: block;
-    padding: 24px 0;
+
     .left {
       width: 100%;
     }

@@ -29,19 +29,12 @@ export default () => {
           </div>
           <div className={styles.right}>
             <img
-              className={styles.move}
+              className={`${styles.move} ${styles.rightImg}`}
               src="/r/banner/1/2.png"
-              alt=""
-              width={350}
               style={{ position: 'relative' }}
             />
             <br />
-            <img
-              src="/r/banner/1/3.png"
-              alt=""
-              width={350}
-              style={{ marginTop: -120, marginLeft: -40 }}
-            />
+            <img src="/r/banner/1/3.png" className={styles.rightImg2} />
           </div>
         </div>
       </div>

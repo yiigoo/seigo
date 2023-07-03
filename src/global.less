@@ -94,3 +94,21 @@ p {
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 20px !important;
 }
+
+@media screen and (max-width: 1024px) {
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 10px !important;
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: 12px !important;
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: 12px !important;
+  }
+}
