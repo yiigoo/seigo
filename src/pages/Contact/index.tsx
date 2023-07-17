@@ -46,9 +46,8 @@ export default function () {
             <i>
               <img src={addressSvg} />
             </i>
-            <div className={styles.label}>Add.:</div>M507,D Building ,Fu Xing
-            Hua Yuan, Long Wei Rd ,Futian Distrrict, Shenzhen ,
-            Guangdong,P.R.China
+            <div className={styles.label}>Add.:</div>
+            Futian Distrrict, Shenzhen, Guangdong, P.R.China
           </div>
         </QueueAnim>
       </div>

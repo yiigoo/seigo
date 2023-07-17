@@ -4,7 +4,25 @@ import { useLocation } from 'umi';
 
 export default function IndexPage() {
   const location = useLocation();
-  console.log(location);
+
+  const routers = [
+    {
+      to: '/home',
+      name: 'Home',
+    },
+    {
+      to: '/about',
+      name: 'About us',
+    },
+    {
+      to: '/product',
+      name: 'Product',
+    },
+    {
+      to: '/contact',
+      name: 'Contact',
+    },
+  ];
   return (
     <>
       <div className={styles.header}>
@@ -14,7 +32,7 @@ export default function IndexPage() {
               <img
                 src="/r/logo.png"
                 alt=""
-                height={48}
+                height={58}
                 className={styles.logoLarge}
               />
               <img
@@ -27,26 +45,13 @@ export default function IndexPage() {
           </h1>
           <nav className={styles.nav}>
             <ul>
-              <li>
-                <NavLink to={'/home'} activeClassName={styles.active}>
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/about'} activeClassName={styles.active}>
-                  About us
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/product'} activeClassName={styles.active}>
-                  Product
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/contact'} activeClassName={styles.active}>
-                  Contact
-                </NavLink>
-              </li>
+              {routers.map(({ to, name }) => (
+                <li key={name}>
+                  <NavLink to={to} activeClassName={styles.active}>
+                    {name}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
