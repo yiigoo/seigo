@@ -1,7 +1,7 @@
 import QueueAnim from 'rc-queue-anim';
 import styles from './index.less';
 import Breadcrumb from '@/components/Breadcrumb/index';
-import pic from './pic.png';
+import pic from './pic.jpg';
 export default function () {
   return (
     <div className="page-container">
